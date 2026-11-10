@@ -74,7 +74,8 @@ h1 { max-width: 20ch; font: 700 clamp(30px, 5.4vw, 54px)/1.14 var(--f-ui); color
 .ficha div { display: flex; justify-content: space-between; gap: 18px; padding: 10px 0; border-bottom: 1px solid rgba(56, 199, 118, .16); }
 .ficha div:last-child { border-bottom: 0; }
 .ficha dt { font: 400 14px/1.5 var(--f-ui); color: var(--suave); }
-.ficha dd { font: 500 15px/1.5 var(--f-ui); color: var(--claro); text-align: right; }
+.ficha dd { min-width: 0; font: 500 15px/1.5 var(--f-ui); color: var(--claro); text-align: right; overflow-wrap: anywhere; }
+.ficha dt { flex: none; }
 
 /* Projetos */
 .intro { margin-bottom: 20px; color: var(--suave) !important; }
@@ -111,3 +112,10 @@ h1 { max-width: 20ch; font: 700 clamp(30px, 5.4vw, 54px)/1.14 var(--f-ui); color
 .chamada { max-width: 46ch; margin-bottom: 22px; font-size: 18px; }
 
 footer { margin-top: auto; padding: 26px 0; font: 400 13px/1.5 var(--f-ui); color: var(--suave); }
+
+.rodape { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+.pilula.mini { min-height: 38px; padding: 6px 16px; font-size: 13px; }
+
+@media (max-width: 700px) { .quadro { -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(5, 22, 14, .97); } }
+
+@media (max-width: 520px) { .ficha div { flex-direction: column; gap: 2px; } .ficha dd { text-align: left; } }
