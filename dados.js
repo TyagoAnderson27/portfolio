@@ -13,6 +13,6 @@ const PROJETOS = [
     resumo: "Sistema de agendamento com painel de administração e aplicativo instalável. O cliente escolhe serviço, barbeiro e horário, e a barbearia confirma pelo WhatsApp.",
     tecnologias: ["HTML", "CSS", "JavaScript", "Firebase", "PWA"],
     site: "https://tyagoanderson27.github.io/barbearia-t2/",
-    imagem: "image/barbearia.jpg"
+    imagem: "image/barbearia.png",
   }
 ];
