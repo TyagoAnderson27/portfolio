@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio | Técnico em Mecatrônica e desenvolvedor de sistemas</title>
+  <meta name="description"
+    content="Mais de dez anos de mecatrônica, agora desenvolvendo sistemas web com JavaScript e Firebase. Veja os projetos.">
+  <meta name="theme-color" content="#030d08">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23030d08'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2338c776'/%3E%3C/svg%3E">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="chuva" aria-hidden="true"></canvas>
+
+  <header class="top">
+    <div class="wrap bar">
+      <span class="marca" id="marca">seu_nome</span>
+      <span class="estado"><span class="lampada" id="lampada" aria-hidden="true"></span><span id="lampadaTxt">Em
+          transição de carreira</span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <h1>Mais de dez anos mantendo máquinas. Agora construo sistemas web.</h1>
+      <p class="lead">Técnico em mecatrônica em transição para o desenvolvimento de sistemas. Já entreguei um sistema
+        completo de agendamento, com painel de administração e aplicativo instalável, que uma barbearia usa de verdade.
+      </p>
+
+      <nav class="menu" aria-label="Janelas do portfólio">
+        <button type="button" class="pilula" data-painel="sobre" aria-expanded="false"
+          aria-controls="painel-sobre">Sobre mim</button>
+        <button type="button" class="pilula" data-painel="projetos" aria-expanded="false"
+          aria-controls="painel-projetos">Projetos</button>
+        <button type="button" class="pilula" data-painel="trajetoria" aria-expanded="false"
+          aria-controls="painel-trajetoria">Trajetória</button>
+        <button type="button" class="pilula" data-painel="tecnologias" aria-expanded="false"
+          aria-controls="painel-tecnologias">Tecnologias</button>
+        <button type="button" class="pilula" data-painel="contato" aria-expanded="false"
+          aria-controls="painel-contato">Contato</button>
+      </nav>
+      <p class="dica" id="dica">Toque em uma opção para abrir a janela.</p>
+
+      <div class="palco">
+        <section class="quadro" id="painel-sobre" aria-labelledby="t-sobre" tabindex="-1" hidden>
+          <header class="quadro-topo">
+            <h2 id="t-sobre">Sobre mim</h2><button type="button" class="fechar"
+              aria-label="Fechar janela Sobre mim">Fechar</button>
+          </header>
+          <div class="quadro-corpo">
+            <p>Passei mais de dez anos diagnosticando falhas e mantendo sistemas eletromecânicos. Hoje uso esse método
+              de investigar e resolver para construir sistemas web que negócios pequenos conseguem usar no dia a dia.
+            </p>
+            <dl class="ficha">
+              <div>
+                <dt>Nome</dt>
+                <dd id="pNome">Tiago Anderson Alves Ferreira</dd>
+              </div>
+              <div>
+                <dt>Formação</dt>
+                <dd>Técnico em mecatrônica/Desenvolvedor Front End</dd>
+              </div>
+              <div>
+                <dt>Tempo de campo</dt>
+                <dd>Mais de 10 anos</dd>
+              </div>
+              <div>
+                <dt>Programando em</dt>
+                <dd>HTML, CSS, JavaScript</dd>
+              </div>
+              <div>
+                <dt>Banco de dados</dt>
+                <dd>Firebase</dd>
+              </div>
+              <div>
+                <dt>Em uso real</dt>
+                <dd>1 sistema de agendamento</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="quadro" id="painel-projetos" aria-labelledby="t-projetos" tabindex="-1" hidden>
+          <header class="quadro-topo">
+            <h2 id="t-projetos">Projetos</h2><button type="button" class="fechar"
+              aria-label="Fechar janela Projetos">Fechar</button>
+          </header>
+          <div class="quadro-corpo">
+            <p class="intro">Sistemas que funcionam fora do computador: cada um nasceu de um problema real de um negócio
+              pequeno.</p>
+            <div class="projetos" id="listaProjetos"></div>
+          </div>
+        </section>
+
+        <section class="quadro" id="painel-trajetoria" aria-labelledby="t-trajetoria" tabindex="-1" hidden>
+          <header class="quadro-topo">
+            <h2 id="t-trajetoria">Trajetória</h2><button type="button" class="fechar"
+              aria-label="Fechar janela Trajetória">Fechar</button>
+          </header>
+          <div class="quadro-corpo">
+            <ol class="linha">
+              <li>
+                <h3>Mecatrônica</h3>
+                <p>Mais de dez anos diagnosticando falhas e mantendo sistemas eletromecânicos. Foi onde aprendi a
+                  investigar com método e a entregar o que funciona na prática.</p>
+              </li>
+              <li>
+                <h3>A virada</h3>
+                <p>Passei a estudar desenvolvimento de sistemas e a usar IA generativa no meu fluxo de trabalho,
+                  aprendendo na prática, projeto a projeto.</p>
+              </li>
+              <li>
+                <h3>Hoje</h3>
+                <p>Entreguei um sistema de agendamento completo para uma barbearia: agenda online, painel com login,
+                  confirmação por WhatsApp e aplicativo instalável no celular.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="quadro" id="painel-tecnologias" aria-labelledby="t-tecnologias" tabindex="-1" hidden>
+          <header class="quadro-topo">
+            <h2 id="t-tecnologias">Tecnologias</h2><button type="button" class="fechar"
+              aria-label="Fechar janela Tecnologias">Fechar</button>
+          </header>
+          <div class="quadro-corpo">
+            <dl class="tecnologias">
+              <div>
+                <dt>Páginas e aplicativos</dt>
+                <dd>HTML, CSS e JavaScript, com layout que funciona no celular e aplicativo instalável (PWA)</dd>
+              </div>
+              <div>
+                <dt>Dados e acesso</dt>
+                <dd>Firebase: banco de dados Firestore, login e regras de segurança</dd>
+              </div>
+              <div>
+                <dt>Publicação</dt>
+                <dd>Git, GitHub e GitHub Pages</dd>
+              </div>
+              <div>
+                <dt>Integrações</dt>
+                <dd>Mensagens prontas no WhatsApp</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="quadro" id="painel-contato" aria-labelledby="t-contato" tabindex="-1" hidden>
+          <header class="quadro-topo">
+            <h2 id="t-contato">Contato</h2><button type="button" class="fechar"
+              aria-label="Fechar janela Contato">Fechar</button>
+          </header>
+          <div class="quadro-corpo">
+            <p class="chamada">Vamos conversar sobre a sua vaga ou o seu sistema. Respondo pelo WhatsApp ou por e-mail.
+            </p>
+            <div class="acoes">
+              <a class="pilula cheia" id="cZap" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+              <a class="pilula" id="cEmail" href="#">Enviar e-mail</a>
+              <a class="pilula" id="cGit" href="#" target="_blank" rel="noopener">GitHub</a>
+              <a class="pilula" id="cLin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p id="rodape"></p>
+    </div>
+  </footer>
+
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
